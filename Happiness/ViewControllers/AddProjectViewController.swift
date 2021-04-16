@@ -1,20 +1,12 @@
-//
-//  ViewController.swift
-//  Happiness
-//
-//  Created by Julia Naomi Boeira on 08/04/21.
-//
-
 import UIKit
 
 class AddProjectViewController: UIViewController {
 
-    @IBOutlet var projectNameField: UITextField!;
-    var happinessSlider = 0.0;
+    @IBOutlet var projectNameField: UITextField!
+    var happinessSlider = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func happinessValue(_ slider: UISlider) {
@@ -25,6 +17,10 @@ class AddProjectViewController: UIViewController {
         let name = projectNameField.text ?? "Undefined"
         let project = Project(name: name, happines: happinessSlider)
         print(project.toString())
+        
+        if let nav = self.navigationController {
+            nav.popViewController(animated: true)
+        }
     }
 }
 

@@ -1,10 +1,3 @@
-//
-//  ProjectsTableViewController.swift
-//  Happiness
-//
-//  Created by Julia Naomi Boeira on 11/04/21.
-//
-
 import UIKit
 
 class ProjectsTableViewController: UITableViewController {
@@ -13,8 +6,6 @@ class ProjectsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("gonna kill you bitch")
-        // Do any additional setup after loading the view.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
