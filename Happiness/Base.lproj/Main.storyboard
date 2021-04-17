@@ -15,7 +15,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="IS0-nh-PZL">
                             <color key="tintColor" red="0.47093814810000001" green="0.53529019700000002" blue="0.44933568950000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="JoS-q8-Hou"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="addProject" id="JoS-q8-Hou"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

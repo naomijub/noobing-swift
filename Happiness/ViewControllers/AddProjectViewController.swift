@@ -2,6 +2,8 @@ import UIKit
 
 class AddProjectViewController: UIViewController {
 
+    var delegate: ProjectsTableViewController?
+    
     @IBOutlet var projectNameField: UITextField!
     var happinessSlider = 0.0
     
@@ -17,6 +19,12 @@ class AddProjectViewController: UIViewController {
         let name = projectNameField.text ?? "Undefined"
         let project = Project(name: name, happines: happinessSlider)
         print(project.toString())
+        
+        if delegate == nil {
+            return
+        } else {
+            delegate!.addProject(project: project)
+        }
         
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
