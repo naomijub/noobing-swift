@@ -4,15 +4,19 @@ class AddProjectViewController: UIViewController {
 
     var delegate: ProjectsTableViewController?
     
+    @IBOutlet var happinessValue: UILabel!
     @IBOutlet var projectNameField: UITextField!
     var happinessSlider = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        happinessValue.text = "0.00"
     }
 
     @IBAction func happinessValue(_ slider: UISlider) {
         happinessSlider = Double(slider.value)
+        let value = String(format: "%.2f", happinessSlider)
+        happinessValue.text = value
     }
     
     @IBAction func add() {
