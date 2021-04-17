@@ -1,6 +1,6 @@
 import UIKit
 
-class ProjectsTableViewController: UITableViewController {
+class ProjectsTableViewController: UITableViewController, AddProjectDelegate {
     var projectList = [Project(name: "WooriDB", happines: 5.0)];
     let cellStyle = UITableViewCell.CellStyle.default;
 
@@ -29,7 +29,7 @@ class ProjectsTableViewController: UITableViewController {
         return cell
     }
     
-    func addProject(project: Project) {
+    func addProject(_ project: Project) {
         projectList.append(project)
         tableView.reloadData()
     }

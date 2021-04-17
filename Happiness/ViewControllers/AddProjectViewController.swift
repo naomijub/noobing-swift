@@ -2,7 +2,7 @@ import UIKit
 
 class AddProjectViewController: UIViewController {
 
-    var delegate: ProjectsTableViewController?
+    var delegate: AddProjectDelegate?
     
     @IBOutlet var happinessValue: UILabel!
     @IBOutlet var projectNameField: UITextField!
@@ -27,7 +27,7 @@ class AddProjectViewController: UIViewController {
         if delegate == nil {
             return
         } else {
-            delegate!.addProject(project: project)
+            delegate!.addProject(project)
         }
         
         if let nav = self.navigationController {

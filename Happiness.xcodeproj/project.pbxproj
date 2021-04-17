@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D34671582622A909002CA10C /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34671572622A909002CA10C /* ProjectsTableViewController.swift */; };
+		D37072A0262A6A9700DCBE1B /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370729F262A6A9700DCBE1B /* add.swift */; };
 		D3D8C901261F3DAC00BC8148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */; };
 		D3D8C903261F3DAC00BC8148 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C902261F3DAC00BC8148 /* SceneDelegate.swift */; };
 		D3D8C905261F3DAC00BC8148 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C904261F3DAC00BC8148 /* AddProjectViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		D34671572622A909002CA10C /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		D370729F262A6A9700DCBE1B /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		D3D8C8FD261F3DAC00BC8148 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D8C902261F3DAC00BC8148 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D370729E262A6A8000DCBE1B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D370729F262A6A9700DCBE1B /* add.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D3D8C8F4261F3DAB00BC8148 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		D3D8C8FF261F3DAC00BC8148 /* Happiness */ = {
 			isa = PBXGroup;
 			children = (
+				D370729E262A6A8000DCBE1B /* Protocols */,
 				D34671502622A81A002CA10C /* ViewControllers */,
 				D3EF77F7262137F900728F9D /* Models */,
 				D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */,
@@ -285,6 +296,7 @@
 				D34671582622A909002CA10C /* ProjectsTableViewController.swift in Sources */,
 				D3D8C903261F3DAC00BC8148 /* SceneDelegate.swift in Sources */,
 				D3EF77F92621382200728F9D /* Project.swift in Sources */,
+				D37072A0262A6A9700DCBE1B /* add.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
