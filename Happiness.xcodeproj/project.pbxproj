@@ -18,6 +18,8 @@
 		D3D8C90D261F3DAC00BC8148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D8C90B261F3DAC00BC8148 /* LaunchScreen.storyboard */; };
 		D3D8C918261F3DAC00BC8148 /* HappinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C917261F3DAC00BC8148 /* HappinessTests.swift */; };
 		D3D8C923261F3DAC00BC8148 /* HappinessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C922261F3DAC00BC8148 /* HappinessUITests.swift */; };
+		D3D957BC262C7A3000DE97AD /* AddDependencyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D957BA262C7A3000DE97AD /* AddDependencyItemViewController.swift */; };
+		D3D957BD262C7A3000DE97AD /* AddDependencyItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3D957BB262C7A3000DE97AD /* AddDependencyItemViewController.xib */; };
 		D3EF77F92621382200728F9D /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EF77F82621382200728F9D /* Project.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		D3D8C91E261F3DAC00BC8148 /* HappinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D8C922261F3DAC00BC8148 /* HappinessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessUITests.swift; sourceTree = "<group>"; };
 		D3D8C924261F3DAC00BC8148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3D957BA262C7A3000DE97AD /* AddDependencyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDependencyItemViewController.swift; sourceTree = "<group>"; };
+		D3D957BB262C7A3000DE97AD /* AddDependencyItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDependencyItemViewController.xib; sourceTree = "<group>"; };
 		D3EF77F82621382200728F9D /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,7 @@
 		D34671502622A81A002CA10C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3D957BA262C7A3000DE97AD /* AddDependencyItemViewController.swift */,
 				D3D8C904261F3DAC00BC8148 /* AddProjectViewController.swift */,
 				D34671572622A909002CA10C /* ProjectsTableViewController.swift */,
 			);
@@ -124,6 +129,7 @@
 		D3D8C8FF261F3DAC00BC8148 /* Happiness */ = {
 			isa = PBXGroup;
 			children = (
+				D3D957C1262C7A7D00DE97AD /* Views */,
 				D370729E262A6A8000DCBE1B /* Protocols */,
 				D34671502622A81A002CA10C /* ViewControllers */,
 				D3EF77F7262137F900728F9D /* Models */,
@@ -153,6 +159,14 @@
 				D3D8C924261F3DAC00BC8148 /* Info.plist */,
 			);
 			path = HappinessUITests;
+			sourceTree = "<group>";
+		};
+		D3D957C1262C7A7D00DE97AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3D957BB262C7A3000DE97AD /* AddDependencyItemViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D3EF77F7262137F900728F9D /* Models */ = {
@@ -269,6 +283,7 @@
 			files = (
 				D3D8C90D261F3DAC00BC8148 /* LaunchScreen.storyboard in Resources */,
 				D3D8C90A261F3DAC00BC8148 /* Assets.xcassets in Resources */,
+				D3D957BD262C7A3000DE97AD /* AddDependencyItemViewController.xib in Resources */,
 				D3D8C908261F3DAC00BC8148 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +315,7 @@
 				D3D8C903261F3DAC00BC8148 /* SceneDelegate.swift in Sources */,
 				D33706D8262BDF8E008E576C /* Item.swift in Sources */,
 				D3EF77F92621382200728F9D /* Project.swift in Sources */,
+				D3D957BC262C7A3000DE97AD /* AddDependencyItemViewController.swift in Sources */,
 				D37072A0262A6A9700DCBE1B /* add.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

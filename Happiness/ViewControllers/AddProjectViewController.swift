@@ -13,6 +13,13 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let newItemButton = UIBarButtonItem(
+            title: "add new dependency",
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(showAddNewDependency)
+        )
+        navigationItem.rightBarButtonItem = newItemButton
         happinessValue.text = "0.00"
     }
 
@@ -39,6 +46,10 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         }
+    }
+    
+    @objc func showAddNewDependency() {
+        print("hello")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
