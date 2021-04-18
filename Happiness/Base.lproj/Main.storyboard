@@ -77,8 +77,11 @@
                                 <rect key="frame" x="75" y="530" width="240" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexColor" red="0.20767577170000001" green="0.23605393869999999" blue="0.19814945219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.87978100609999998" green="1" blue="0.83942446920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="KS5-tf-q0g"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kl1-P3-UNd"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4v-GK-Wje">

@@ -1,9 +1,11 @@
 import UIKit
 
-class AddProjectViewController: UIViewController, UITableViewDataSource {
+class AddProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let cellStyle = UITableViewCell.CellStyle.default;
     var delegate: AddProjectDelegate?
-    var deps = ["serde", "edn-rs", "actix", "brcode", "uuid", "rayon", "num_cpus", "log", "chrono", "ron", "bytes"]
+    var deps = [Item("serde"), Item("edn-rs"), Item("actix"), Item("brcode"), Item("uuid"),
+                Item("rayon"), Item("num_cpus"), Item("log"), Item("chrono"), Item("ron"),
+                Item("bytes")]
     
     @IBOutlet var happinessValue: UILabel!
     @IBOutlet var projectNameField: UITextField!
@@ -21,8 +23,11 @@ class AddProjectViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func add() {
+        let items = deps.filter { (i) -> Bool in
+            i.check
+        }
         let name = projectNameField.text ?? "Undefined"
-        let project = Project(name: name, happines: happinessSlider)
+        let project = Project(name: name, happines: happinessSlider, deps: items)
         print(project.toString())
         
         if delegate == nil {
@@ -46,8 +51,25 @@ class AddProjectViewController: UIViewController, UITableViewDataSource {
         
         let cell = UITableViewCell(style: cellStyle, reuseIdentifier: nil)
         
-        cell.textLabel?.text = dep
+        cell.textLabel?.text = dep.name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+    
+        if cell == nil {
+            return
+        }
+        
+        if (cell!.accessoryType == UITableViewCell.AccessoryType.checkmark) {
+            cell!.accessoryType = UITableViewCell.AccessoryType.none
+        } else {
+            cell!.accessoryType = UITableViewCell.AccessoryType.checkmark
+        }
+        let row = indexPath.row
+        let dep = deps[row]
+        dep.markCheck()
     }
 }
 

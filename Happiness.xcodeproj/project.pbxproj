@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D33706D8262BDF8E008E576C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33706D7262BDF8E008E576C /* Item.swift */; };
 		D34671582622A909002CA10C /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34671572622A909002CA10C /* ProjectsTableViewController.swift */; };
 		D37072A0262A6A9700DCBE1B /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370729F262A6A9700DCBE1B /* add.swift */; };
 		D3D8C901261F3DAC00BC8148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D33706D7262BDF8E008E576C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D34671572622A909002CA10C /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		D370729F262A6A9700DCBE1B /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		D3D8C8FD261F3DAC00BC8148 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D3EF77F82621382200728F9D /* Project.swift */,
+				D33706D7262BDF8E008E576C /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				D3D8C901261F3DAC00BC8148 /* AppDelegate.swift in Sources */,
 				D34671582622A909002CA10C /* ProjectsTableViewController.swift in Sources */,
 				D3D8C903261F3DAC00BC8148 /* SceneDelegate.swift in Sources */,
+				D33706D8262BDF8E008E576C /* Item.swift in Sources */,
 				D3EF77F92621382200728F9D /* Project.swift in Sources */,
 				D37072A0262A6A9700DCBE1B /* add.swift in Sources */,
 			);
