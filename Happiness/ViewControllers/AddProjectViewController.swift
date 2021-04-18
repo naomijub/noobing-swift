@@ -1,8 +1,9 @@
 import UIKit
 
-class AddProjectViewController: UIViewController {
-
+class AddProjectViewController: UIViewController, UITableViewDataSource {
+    let cellStyle = UITableViewCell.CellStyle.default;
     var delegate: AddProjectDelegate?
+    var deps = ["serde", "edn-rs", "actix", "brcode", "uuid", "rayon", "num_cpus", "log", "chrono", "ron", "bytes"]
     
     @IBOutlet var happinessValue: UILabel!
     @IBOutlet var projectNameField: UITextField!
@@ -33,6 +34,20 @@ class AddProjectViewController: UIViewController {
         if let nav = self.navigationController {
             nav.popViewController(animated: true)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return deps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = indexPath.row
+        let dep = deps[row]
+        
+        let cell = UITableViewCell(style: cellStyle, reuseIdentifier: nil)
+        
+        cell.textLabel?.text = dep
+        return cell
     }
 }
 

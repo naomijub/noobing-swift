@@ -24,7 +24,6 @@ class ProjectsTableViewController: UITableViewController, AddProjectDelegate {
         let project = projectList[row]
     
         let cell = UITableViewCell(style: cellStyle, reuseIdentifier: nil)
-        
         cell.textLabel?.text = project.name
         return cell
     }
