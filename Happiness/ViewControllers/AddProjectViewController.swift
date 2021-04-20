@@ -1,14 +1,16 @@
 import UIKit
 
-class AddProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AddProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddItemDelegate {
     let cellStyle = UITableViewCell.CellStyle.default;
     var delegate: AddProjectDelegate?
-    var deps = [Item("serde"), Item("edn-rs"), Item("actix"), Item("brcode"), Item("uuid"),
-                Item("rayon"), Item("num_cpus"), Item("log"), Item("chrono"), Item("ron"),
-                Item("bytes")]
+    var deps = [Item("serde", "1.0"), Item("edn-rs", "1.0"), Item("actix", "1.0"), Item("brcode", "1.0"), Item("uuid", "1.0"),
+                Item("rayon", "1.0"), Item("num_cpus", "1.0"), Item("log", "1.0"), Item("chrono", "1.0"), Item("ron", "1.0"),
+                Item("bytes", "1.0")]
     
     @IBOutlet var happinessValue: UILabel!
     @IBOutlet var projectNameField: UITextField!
+    @IBOutlet var tableView: UITableView?
+    
     var happinessSlider = 0.0
     
     override func viewDidLoad() {
@@ -48,8 +50,19 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func addItem(_ item: Item) {
+        deps.append(item)
+        if tableView == nil {
+            return
+        }
+        tableView!.reloadData()
+    }
+    
     @objc func showAddNewDependency() {
-        print("hello")
+        let newDeps = AddDependencyItemViewController(delegate: self)
+        if let nav = navigationController {
+            nav.pushViewController(newDeps, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

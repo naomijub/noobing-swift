@@ -10,3 +10,7 @@ import Foundation
 protocol AddProjectDelegate {
     func addProject(_ project: Project)
 }
+
+protocol AddItemDelegate {
+    func addItem(_ item: Item)
+}

@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDependencyItemViewController" customModule="Happiness" customModuleProvider="target">
             <connections>
+                <outlet property="name" destination="RRH-0u-K4h" id="hm0-gu-acl"/>
+                <outlet property="version" destination="M4g-MX-x8g" id="yh4-WU-8tR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,6 +58,9 @@
                     <state key="normal" title="Add">
                         <color key="titleColor" red="0.1153698544" green="0.13113474110000001" blue="0.1100777104" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="addDeps" destination="-1" eventType="touchUpInside" id="LDb-dP-Z4V"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
