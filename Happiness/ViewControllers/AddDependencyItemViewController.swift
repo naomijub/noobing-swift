@@ -25,9 +25,7 @@ class AddDependencyItemViewController: UIViewController {
         let newName = name!.text
         let newVersion = version!.text
         
-        if newName == nil || newVersion == nil || delegate == nil {
-            return
-        }
+        if newName == nil || newVersion == nil || delegate == nil { return }
         
         let newItem = Item(newName!, newVersion!)
         delegate!.addItem(newItem)

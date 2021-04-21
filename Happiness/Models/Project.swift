@@ -23,4 +23,16 @@ class Project {
         return "Project \(name) has hapiness of \(value) and \(deps.count) dependencies"
     }
     
+    func details() -> String {
+        let  value = String(format: "%.2f", happines)
+        var details = "hapiness of \(value) \n"
+        let depsStr = deps
+            .map { (dep) -> String in
+                "\(dep.name), version: \(dep.version)"
+            }
+            .joined(separator: "\n")
+        
+        details.append(depsStr)
+        return details
+    }
 }

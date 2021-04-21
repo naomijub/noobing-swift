@@ -25,11 +25,28 @@ class ProjectsTableViewController: UITableViewController, AddProjectDelegate {
     
         let cell = UITableViewCell(style: cellStyle, reuseIdentifier: nil)
         cell.textLabel?.text = project.name
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showProjectDetails))
+        cell.addGestureRecognizer(longPress)
         return cell
     }
     
     func addProject(_ project: Project) {
         projectList.append(project)
         tableView.reloadData()
+    }
+    
+    @objc func showProjectDetails(recognizer: UILongPressGestureRecognizer) {
+        if recognizer.state == UILongPressGestureRecognizer.State.began {
+            let cell = recognizer.view as! UITableViewCell
+            let indexPath = tableView?.indexPath(for: cell)
+            if indexPath == nil { return }
+            let row = indexPath!.row
+            let item = projectList[row]
+            
+            let details = UIAlertController(title: item.name, message: item.details(), preferredStyle: UIAlertController.Style.alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            details.addAction(ok)
+            present(details, animated: true, completion: nil)
+        }
     }
 }

@@ -52,9 +52,7 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
     
     func addItem(_ item: Item) {
         deps.append(item)
-        if tableView == nil {
-            return
-        }
+        if tableView == nil { return }
         tableView!.reloadData()
     }
     
@@ -82,9 +80,7 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
     
-        if cell == nil {
-            return
-        }
+        if cell == nil { return }
         
         if (cell!.accessoryType == UITableViewCell.AccessoryType.checkmark) {
             cell!.accessoryType = UITableViewCell.AccessoryType.none
