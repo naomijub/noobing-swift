@@ -17,18 +17,15 @@ class AddDependencyItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func addDeps() {
         let newName = name!.text
         let newVersion = version!.text
-        
-        if newName == nil || newVersion == nil || delegate == nil { return }
-        
-        let newItem = Item(newName!, newVersion!)
-        delegate!.addItem(newItem)
+        if let (name, version, del) = ifLets(t: newName, s: newVersion, u: delegate) {
+            let newItem = Item(name, version)
+            del.addItem(newItem)
+        }
         
         if let nav = navigationController {
             nav.popViewController(animated: true)

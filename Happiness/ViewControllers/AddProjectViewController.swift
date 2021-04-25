@@ -39,10 +39,8 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
         let project = Project(name: name, happines: happinessSlider, deps: items)
         print(project.toString())
         
-        if delegate == nil {
-            return
-        } else {
-            delegate!.addProject(project)
+        if let del = delegate {
+            del.addProject(project)
         }
         
         if let nav = self.navigationController {
@@ -52,8 +50,9 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
     
     func addItem(_ item: Item) {
         deps.append(item)
-        if tableView == nil { return }
-        tableView!.reloadData()
+        if let tabView = tableView {
+            tabView.reloadData()
+        }
     }
     
     @objc func showAddNewDependency() {
@@ -80,16 +79,16 @@ class AddProjectViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
     
-        if cell == nil { return }
-        
-        if (cell!.accessoryType == UITableViewCell.AccessoryType.checkmark) {
-            cell!.accessoryType = UITableViewCell.AccessoryType.none
-        } else {
-            cell!.accessoryType = UITableViewCell.AccessoryType.checkmark
+        if let c = cell {
+            if (c.accessoryType == UITableViewCell.AccessoryType.checkmark) {
+                c.accessoryType = UITableViewCell.AccessoryType.none
+            } else {
+                c.accessoryType = UITableViewCell.AccessoryType.checkmark
+            }
+            let row = indexPath.row
+            let dep = deps[row]
+            dep.markCheck()
         }
-        let row = indexPath.row
-        let dep = deps[row]
-        dep.markCheck()
     }
 }
 

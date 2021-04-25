@@ -24,7 +24,7 @@ class Project {
     }
     
     func details() -> String {
-        let  value = String(format: "%.2f", happines)
+        let value = String(format: "%.2f", happines)
         var details = "hapiness of \(value) \n"
         let depsStr = deps
             .map { (dep) -> String in

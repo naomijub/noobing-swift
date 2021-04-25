@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D33706D8262BDF8E008E576C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33706D7262BDF8E008E576C /* Item.swift */; };
 		D34671582622A909002CA10C /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34671572622A909002CA10C /* ProjectsTableViewController.swift */; };
+		D359B1BB263510580066AF62 /* IfLet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D359B1BA263510580066AF62 /* IfLet.swift */; };
 		D37072A0262A6A9700DCBE1B /* add.swift in Sources */ = {isa = PBXBuildFile; fileRef = D370729F262A6A9700DCBE1B /* add.swift */; };
 		D3D8C901261F3DAC00BC8148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */; };
 		D3D8C903261F3DAC00BC8148 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D8C902261F3DAC00BC8148 /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		D33706D7262BDF8E008E576C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D34671572622A909002CA10C /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		D359B1BA263510580066AF62 /* IfLet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfLet.swift; sourceTree = "<group>"; };
 		D370729F262A6A9700DCBE1B /* add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = add.swift; sourceTree = "<group>"; };
 		D3D8C8FD261F3DAC00BC8148 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D8C900261F3DAC00BC8148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D359B1B9263510460066AF62 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D359B1BA263510580066AF62 /* IfLet.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		D370729E262A6A8000DCBE1B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		D3D8C8FF261F3DAC00BC8148 /* Happiness */ = {
 			isa = PBXGroup;
 			children = (
+				D359B1B9263510460066AF62 /* Logic */,
 				D3D957C1262C7A7D00DE97AD /* Views */,
 				D370729E262A6A8000DCBE1B /* Protocols */,
 				D34671502622A81A002CA10C /* ViewControllers */,
@@ -316,6 +327,7 @@
 				D33706D8262BDF8E008E576C /* Item.swift in Sources */,
 				D3EF77F92621382200728F9D /* Project.swift in Sources */,
 				D3D957BC262C7A3000DE97AD /* AddDependencyItemViewController.swift in Sources */,
+				D359B1BB263510580066AF62 /* IfLet.swift in Sources */,
 				D37072A0262A6A9700DCBE1B /* add.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
